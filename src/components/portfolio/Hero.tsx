@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Code2, Shield, Terminal } from "lucide-react";
 import { projects } from "@/data/projects";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const roles = ["security tools", "automation scripts", "recon utilities", "OSINT helpers"];
 const stack = ["Python", "Linux", "Arch Linux", "Ethical Hacking", "Offensive Security", "OSINT", "Automation", "Mathematics", "AI-assisted Development"];
@@ -41,9 +42,9 @@ function Avatar() {
       <div className="absolute inset-6 rounded-full gradient-brand opacity-40 blur-3xl" />
       <div className="absolute inset-0 rounded-full p-[3px]">
         <div className="absolute inset-0 rounded-full bg-[conic-gradient(from_0deg,var(--primary),var(--primary-glow),transparent_60%,var(--primary))] animate-spin-slow" />
-        <div role="img" aria-label="Profile photo placeholder for Emon Khan"
-          className="relative flex h-full w-full items-center justify-center rounded-full bg-card">
-          <span className="gradient-text text-7xl font-bold tracking-tighter sm:text-8xl">EK</span>
+        <div className="relative h-full w-full overflow-hidden rounded-full bg-card">
+          <img src={profilePhoto} alt="Profile picture of Emon Khan" width={320} height={320}
+            className="h-full w-full object-cover" />
         </div>
       </div>
       {chips.map(({ icon: Icon, label, pos, delay }) => (

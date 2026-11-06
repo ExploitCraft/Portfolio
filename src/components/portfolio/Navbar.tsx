@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Moon, Sun, X } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const links = ["About", "Skills", "Projects", "Contact"];
 
@@ -51,7 +52,7 @@ export function Navbar() {
       <div className="container-page">
         <nav aria-label="Main" className="glass mx-auto flex h-14 max-w-5xl items-center justify-between rounded-full pl-5 pr-2 shadow-soft">
           <a href="#top" className="flex items-center gap-2.5 font-semibold tracking-tight">
-            <span className="flex h-7 w-7 items-center justify-center rounded-lg gradient-brand text-xs font-bold text-primary-foreground">EK</span>
+            <img src={profilePhoto} alt="" width={28} height={28} className="h-7 w-7 rounded-full object-cover ring-1 ring-primary/40" />
             Emon Khan
           </a>
           <div className="hidden items-center gap-1 md:flex">
